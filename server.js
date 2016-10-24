@@ -27,10 +27,6 @@ app.get('/picture.html', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'picture.html'));
 });
 
-app.get('/nishant.jpg', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'DSC_0068.jpg'));
-});
-
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
