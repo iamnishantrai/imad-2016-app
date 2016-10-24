@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+var app = express();
 
 var config = {
     user:'iamnishantrai',
@@ -11,7 +12,6 @@ var config = {
     password:process.env.DB.PASSWORD
 };
 
-var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
@@ -33,8 +33,6 @@ app.get('/test-db',function(req,res){
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
