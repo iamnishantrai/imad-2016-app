@@ -27,7 +27,7 @@ app.get('/picture.html', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'picture.html'));
 });
 
-app.get('/nishant', function(req,res){
+app.get('/DSC_0068.jpg', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'DSC_0068.jpg'));
 });
 
