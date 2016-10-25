@@ -7,4 +7,7 @@ function onClick(){
                 document.getElementById("count").innerHTML = counter;
         }
     };
+    
+    request.open("GET", "http://iamnishantrai.imad.hasura-app.io/counter", true);
+    request.send(null);
 }
