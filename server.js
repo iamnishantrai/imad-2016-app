@@ -17,8 +17,9 @@ app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
     counter = counter+1;
-    res.send('<p>'+counter.toString()+'</p>');
+    
     res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+    res.send('<p>'+counter.toString()+'</p>');
 });
 
 var counter = 0;
