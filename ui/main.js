@@ -1,7 +1,7 @@
+var counter = 0;
+
 function onClick(){
-    
-    var counter = 0;
-    
+
     counter = counter +1;
     document.getElementById("count").innerHTML = counter.toString();
     
