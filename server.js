@@ -16,17 +16,15 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-    counter = counter+1;
-    
-    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-    res.send('<p>'+counter.toString()+'</p>');
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 var counter = 0;
 
-/*app.get('/counter',function(req,res){
-    
-});*/
+app.get('/counter',function(req,res){
+    counter = counter+1;
+    res.send(counter.toString());
+});
 
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
