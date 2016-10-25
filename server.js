@@ -55,13 +55,13 @@ app.get('/picture.html', function (req,res) {
 });
 
 var articles = {
-    articleOne: {
+    article-one: {
         title:'Article One | Nishant Rai',
         heading:'Article One',
         date:'Sep5, 2016',
         content:'<div><p> Hey my name is Nishant</p></div>'
     },
-    articleTwo :{
+    article-two :{
         title:'Article Two | Nishant Rai',
         heading:'Article Two',
         date:'Sep 10, 2016',
@@ -109,8 +109,9 @@ return htmlTemplate;
 }
 
 
-app.get('/article-one',function(req,res){
-    res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    
+    res.send(createTemplate(articles[articleName]));
 });
 
 
