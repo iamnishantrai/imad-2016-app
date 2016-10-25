@@ -44,7 +44,7 @@ function onClickSubmit(){
         }
     };
     
-    xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/submitname>name="+name,true);
+    xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/submitname?name="+name,true);
     xhttp.send(null);
     
     /*var names = ['name1', 'name2', 'name 3'];
