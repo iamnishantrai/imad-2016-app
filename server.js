@@ -55,13 +55,13 @@ app.get('/picture.html', function (req,res) {
 });
 
 var articles = {
-    article-one: {
+    'article-one':{
         title:'Article One | Nishant Rai',
         heading:'Article One',
         date:'Sep5, 2016',
         content:'<div><p> Hey my name is Nishant</p></div>'
     },
-    article-two :{
+    'article-two':{
         title:'Article Two | Nishant Rai',
         heading:'Article Two',
         date:'Sep 10, 2016',
