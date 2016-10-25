@@ -33,7 +33,7 @@ app.get('/test-db',function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-            res.send(JSON.stringify(result.rows) +"\n"+ JSON.stringify(result));
+            res.send(JSON.stringify(result.rows) +"<br><hr>"+ JSON.stringify(result));
         }
     });
 });
