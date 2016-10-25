@@ -27,11 +27,11 @@ var name = nameInput.value;
 
 function onClickSubmit(){
     
-    var response = new XMLHttpRequest();
+    var xhttp = new XMLHttpRequest();
     
-    response.onreadystatechange = function(){
-        if(respnse.readyState == XMLHttpRequest.DONE){
-            if(response.status==200){
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState == XMLHttpRequest.DONE){
+            if(xhttp.status==200){
                 var names = xhttp.responseText;
                 names = JSON.parse(names);
                 var list = '';
