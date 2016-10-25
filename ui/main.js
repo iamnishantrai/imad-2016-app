@@ -36,7 +36,8 @@ var namex = document.getElementById("name").value;
 
 var submit = document.getElementById("submit_btn");
 
-submit.onclick = function () {
+
+function onClickSubmit(){
     
     var names = ['name1', 'name2', 'name 3'];
     
@@ -48,4 +49,4 @@ submit.onclick = function () {
     var ul = document.getElementById("namelist");
     ul.innerHTML = list;
     
-};
+}
