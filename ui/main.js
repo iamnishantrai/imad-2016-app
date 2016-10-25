@@ -1,3 +1,4 @@
+//Counter Examples
 //var counter = 0;
 
 function onClick(){
