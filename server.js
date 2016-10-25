@@ -31,6 +31,7 @@ app.get('/test-db',function(req,res){
     });
 });
 
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
@@ -52,6 +53,42 @@ app.get('/1.jpg', function(req,res){
 app.get('/picture.html', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'picture.html'));
 });
+
+var articleOne = {
+    title:'Article One | Nishant Rai',
+    heading:'Article One',
+    date:'Sep5, 2016',
+    content:'<div><p> Hey my name is Nishant</p></div>'
+};
+
+var HtmlTemplate = 
+`<html>
+    <head>
+    <title> ${title}
+    </title>
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
+    <link href=/ui/style.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <div>
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <br />
+            <h2>
+                ${heading}
+            </h2>
+            <div>
+                ${date}
+            </div>
+            <div>
+                ${content}
+            </div>
+        </div>
+    </body>
+<html>
+`;
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
