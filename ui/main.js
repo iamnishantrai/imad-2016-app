@@ -22,7 +22,8 @@ function onClick(){
     request.send(null);
 }
 
-var namex = document.getElementById("name").value;
+var nameInput = document.getElementById("name");
+var name = nameInput.value;
 
 var submit = document.getElementById("submit_btn");
 
@@ -46,7 +47,7 @@ function onClickSubmit(){
         }
     };
     
-    request.open("GET", "http://iamnishantrai.imad.hasura-app.io/submitname>name="+namex,true);
+    request.open("GET", "http://iamnishantrai.imad.hasura-app.io/submitname>name="+name,true);
     request.send(null);
     
     /*var names = ['name1', 'name2', 'name 3'];
