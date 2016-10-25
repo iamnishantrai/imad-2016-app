@@ -34,7 +34,7 @@ function onClickSubmit(){
     xhttp.onreadystatechange = function(){
         if(xhttp.readyState == XMLHttpRequest.DONE){
             if(request.status==200){
-                var names = xhhtp.responseText;
+                var names = xhttp.responseText;
                 names = JSON.parse(names);
                 var list = '';
                 for(var i=0; i<names.length; i++){
