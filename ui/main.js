@@ -29,14 +29,31 @@ var submit = document.getElementById("submit_btn");
 
 function onClickSubmit(){
     
-    var names = ['name1', 'name2', 'name 3'];
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState == XMLHttpRequest.DONE){
+            if(request.status==200){
+                var names = [];
+                var list = '';
+                for(var i=0; i<names.length; i++){
+                    list += '<li>' + names[i] + '</li>';
+                }
+            }
+        }
+    };
+    
+    request.open("GET", "http://iamnishantrai.imad.hasura-app.io/submitname>name="+namex,true);
+    request.send(null);
+    
+    /*var names = ['name1', 'name2', 'name 3'];
     
     var list = '';
     for( var i=0; i<names.length; i++){
-        list += '<li>' + names[i] + '</i>';
+        list += '<li>' + names[i] + '</li>';
     }
     
     var ul = document.getElementById("namelist");
     ul.innerHTML = list;
-    
+    */
 }
