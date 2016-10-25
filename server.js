@@ -61,7 +61,14 @@ var articleOne = {
     content:'<div><p> Hey my name is Nishant</p></div>'
 };
 
-var HtmlTemplate = 
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heeading = data.heading;
+    var content = data.content;
+    
+    
+    var HtmlTemplate = 
 `<html>
     <head>
     <title> ${title}
@@ -89,6 +96,14 @@ var HtmlTemplate =
     </body>
 <html>
 `;
+
+return htmlTemplate;
+}
+
+
+app.get('/article-one',function(req,res){
+    res.send(createTemplate(articleOne));
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
