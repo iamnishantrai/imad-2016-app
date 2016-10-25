@@ -22,9 +22,6 @@ function onClick(){
     request.send(null);
 }
 
-var nameInput = document.getElementById("name");
-var name = nameInput.value;
-
 function onClickSubmit(){
     
     var xhttp = new XMLHttpRequest();
@@ -43,6 +40,8 @@ function onClickSubmit(){
             }
         }
     };
+    
+    var name = document.getElementById("name").value;
     
     xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/submitname?name="+name,true);
     xhttp.send(null);
