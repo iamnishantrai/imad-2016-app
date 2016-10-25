@@ -54,11 +54,19 @@ app.get('/picture.html', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'picture.html'));
 });
 
-var articleOne = {
-    title:'Article One | Nishant Rai',
-    heading:'Article One',
-    date:'Sep5, 2016',
-    content:'<div><p> Hey my name is Nishant</p></div>'
+var articles = {
+    articleOne: {
+        title:'Article One | Nishant Rai',
+        heading:'Article One',
+        date:'Sep5, 2016',
+        content:'<div><p> Hey my name is Nishant</p></div>'
+    },
+    articleTwo :{
+        title:'Article Two | Nishant Rai',
+        heading:'Article Two',
+        date:'Sep 10, 2016',
+        content:'<div><p> Hey this is my Second Article</p></div>'
+    }
 };
 
 function createTemplate(data){
