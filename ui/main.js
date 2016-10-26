@@ -57,3 +57,27 @@ function onClickSubmit(){
     ul.innerHTML = list;
     */
 }
+
+function onSubmitArticles(){
+    
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState == XMLHttpRequest.DONE){
+            if(xhttp.status==200){
+                var title = xhttp.responseText;
+               title = JSON.parse(title);
+                var list = '';
+                for(var i=0; i<title.length; i++){
+                    pool.query("INSERT INTO title VALUES('"+title[i]+"');");
+                }
+                
+            }
+        }
+    };
+    
+    var title = document.getElementById("title-articles").value;
+    
+    xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/write-articles",true);
+    xhttp.send(null);
+}
