@@ -57,6 +57,3 @@ function onClickSubmit(){
     ul.innerHTML = list;
     */
 }
-
-function onSubmitArticles(){
-}
