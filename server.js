@@ -51,6 +51,10 @@ app.get('/twitter',function(req,res){
     res.sendFile(path.join(__dirname,'ui','twitter.html'));
 });
 
+app.get('/fb',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','facebook.html'));
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
