@@ -62,7 +62,7 @@ function onSubmitArticles(){
     pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');", function(err, result){
         if(err)
             console.log(err);
-        document.getElementById('submit-articles').innerHTML = "yolo";
+        document.getElementById("submit-articles").innerHTML = "yolo";
     });
     /*
     var xhttp = new XMLHttpRequest();
