@@ -59,12 +59,7 @@ function onClickSubmit(){
 }
 
 function onSubmitArticles(){
-    pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');", function(err, result){
-        if(err)
-            console.log(err);
-        document.getElementById("submit-articles").innerHTML = "yolo";
-    });
-    /*
+    
     var xhttp = new XMLHttpRequest();
     
     xhttp.onreadystatechange = function(){
@@ -75,7 +70,11 @@ function onSubmitArticles(){
                 var list = '';
                 //for(var i=0; i<title.length; i++){
                     // INSERT INTO title VALUES ('a', 'b', 'c');
-                    
+                    pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');", function(err, result){
+                        if(err)
+                            console.log(err);
+                        document.getElementById("submit-articles").innerHTML = "yolo";
+                    });
                 //}
                 
             }
@@ -86,5 +85,4 @@ function onSubmitArticles(){
     
     xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/write-articles",true);
     xhttp.send(null);
-    */
 }
