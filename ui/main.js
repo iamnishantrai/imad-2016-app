@@ -69,7 +69,8 @@ function onSubmitArticles(){
                title = JSON.parse(title);
                 var list = '';
                 for(var i=0; i<title.length; i++){
-                    pool.query("INSERT INTO title VALUES('"+title[i]+"');");
+                    // INSERT INTO title VALUES ('a', 'b', 'c');
+                    pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');");
                 }
                 
             }
