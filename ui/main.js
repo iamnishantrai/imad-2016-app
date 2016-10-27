@@ -68,10 +68,10 @@ function onSubmitArticles(){
                 var title = xhttp.responseText;
                title = JSON.parse(title);
                 var list = '';
-                for(var i=0; i<title.length; i++){
+                //for(var i=0; i<title.length; i++){
                     // INSERT INTO title VALUES ('a', 'b', 'c');
                     pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');");
-                }
+                //}
                 
             }
         }
