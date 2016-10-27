@@ -70,7 +70,10 @@ function onSubmitArticles(){
                 var list = '';
                 //for(var i=0; i<title.length; i++){
                     // INSERT INTO title VALUES ('a', 'b', 'c');
-                    pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');");
+                    pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');", function(err, result){
+                        if(err)
+                            console.log(err);
+                    });
                 //}
                 
             }
