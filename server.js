@@ -47,6 +47,9 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+app.get('/twitter',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','twitter.html'));
+});
 
 
 app.get('/ui/style.css', function (req, res) {
