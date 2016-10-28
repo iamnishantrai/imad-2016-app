@@ -58,7 +58,7 @@ function onClickSubmit(){
     */
 }
 
-function onSubmitArticles(){
+//function onSubmitArticles(){
     
     var xhttp = new XMLHttpRequest();
     
