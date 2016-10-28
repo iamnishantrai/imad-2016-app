@@ -26,8 +26,33 @@ app.get('/test',function(req,res){
 app.get('/write-articles.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'write-articles.html'));
   function onSubmitArticles(){
-      
-  }
+    
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState == XMLHttpRequest.DONE){
+            if(xhttp.status==200){
+                var title = xhttp.responseText;
+               title = JSON.parse(title);
+                var list = '';
+                //for(var i=0; i<title.length; i++){
+                    // INSERT INTO title VALUES ('a', 'b', 'c');
+                    pool.query("INSERT INTO title VALUES(1, '"+title[i]+"');", function(err, result){
+                        if(err)
+                            console.log(err);
+                        document.getElementById("submit-articles").innerHTML = "yolo";
+                    });
+                //}
+                
+            }
+        }
+    };
+    
+    var title = document.getElementById("title-articles").value;
+    
+    xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/write-articles",true);
+    xhttp.send(null);
+}
 });
 
 var counter = 0;
