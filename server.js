@@ -25,17 +25,6 @@ app.get('/test',function(req,res){
 
 app.get('/write-articles.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'write-articles.html'));
-  function onSubmitArticles(){
-    var title = document.getElementById("title-articles").value;
-    title = JSON.parse(title);
-    var list = '';
-        pool.query("INSERT INTO title VALUES(1, '"+title+"');", function(err, result){
-            if(err)
-                console.log(err);
-            document.getElementById("submit-articles").innerHTML = "yolo";
-        });
-    }
-    
 });
 
 var counter = 0;
