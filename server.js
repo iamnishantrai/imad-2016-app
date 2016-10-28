@@ -25,6 +25,9 @@ app.get('/test',function(req,res){
 
 app.get('/write-articles.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'write-articles.html'));
+  function onSubmitArticles(){
+      
+  }
 });
 
 var counter = 0;
