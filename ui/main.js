@@ -58,7 +58,7 @@ function onClickSubmit(){
     */
 }
 
-/*function onSubmitArticles(){
+function onSubmitArticles(){
     
     var xhttp = new XMLHttpRequest();
     
@@ -85,4 +85,4 @@ function onClickSubmit(){
     
     xhttp.open("GET", "http://iamnishantrai.imad.hasura-app.io/write-articles",true);
     xhttp.send(null);
-}*/
+}
